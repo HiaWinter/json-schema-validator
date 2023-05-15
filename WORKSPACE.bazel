@@ -1,0 +1,10 @@
+workspace(name = "json_schema_validator")
+
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
+
+new_git_repository(
+    name = "nlohmann",
+    build_file = "//third_party:nlohmann.BUILD",
+    tag = "v3.10.0",
+    remote = "git@code.deeproute.ai:third-party-repos/json.git",
+)

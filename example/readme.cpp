@@ -1,7 +1,7 @@
 #include <iomanip>
 #include <iostream>
 
-#include <nlohmann/json-schema.hpp>
+#include "src/nlohmann/json-schema.hpp"
 
 using nlohmann::json;
 using nlohmann::json_schema::json_validator;
@@ -44,7 +44,7 @@ static json person_schema = R"(
 // The people are defined with brace initialization
 static json bad_person = {{"age", 42}};
 static json good_person = {{"name", "Albert"}, {"age", 42}, {"address", {{"street", "Main Street"}}}};
-static json good_defaulted_person = {{"name", "Knut"}, {"age", 69}, {"address", {}}};
+static json good_defaulted_person = {{"name", "Knut"}, {"age", 69}};
 
 int main()
 {

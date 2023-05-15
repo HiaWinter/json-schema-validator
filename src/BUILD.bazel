@@ -1,0 +1,23 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+  name = "json_schema_validator",
+  hdrs = [
+    "json-patch.hpp",
+    "json-schema-draft7.json.cpp",
+    "smtp-address-validator.hpp",
+  ],
+  srcs = [
+    "json-patch.cpp",
+    "json-uri.cpp",
+    "json-validator.cpp",
+    "smtp-address-validator.cpp",
+    "string-format-check.cpp",
+  ],
+  deps = [
+    "//src/nlohmann:json_schema",
+    "@nlohmann",
+  ]
+)

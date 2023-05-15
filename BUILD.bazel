@@ -1,0 +1,14 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+  name = "json_schema_validator",
+  hdrs = [
+    "//src/nlohmann:json-schema.hpp",
+  ],
+  deps = [
+    "//src/nlohmann:json_schema",
+    "@nlohmann",
+  ]
+)
