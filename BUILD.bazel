@@ -9,6 +9,7 @@ cc_library(
   ],
   deps = [
     "//src/nlohmann:json_schema",
+    "//src:json_schema_validator",
     "@nlohmann",
   ]
 )
